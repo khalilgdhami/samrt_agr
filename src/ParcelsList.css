@@ -1,0 +1,145 @@
+.parcels-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 30px;
+}
+
+.parcels-page h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* FORMULAIRE */
+.parcel-form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 0 auto 25px;
+  backdrop-filter: blur(10px);
+}
+
+.parcel-form input {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.parcel-form button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.parcel-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-add { background: #10b981; color: #fff; }
+.btn-update { background: #f59e0b; color: #fff; }
+.btn-cancel { background: #6b7280; color: #fff; }
+
+/* RECHERCHE */
+.search-bar-list {
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+
+.search-bar-list input {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: #fff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+/* TABLEAU */
+.table-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.parcels-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.parcels-table thead {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+}
+
+.parcels-table th,
+.parcels-table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.parcels-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.2s ease;
+}
+
+.clickable-row { cursor: pointer; }
+
+.parcels-table tbody tr:hover {
+  background: #f1f5f9;
+}
+
+.temp-cell { color: #ef4444; font-weight: 700; }
+.hum-cell { color: #0ea5e9; font-weight: 700; }
+
+.no-data {
+  text-align: center;
+  color: #94a3b8;
+  padding: 30px;
+  font-style: italic;
+}
+
+/* BOUTONS ACTIONS */
+.btn-edit,
+.btn-delete {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 6px;
+  transition: transform 0.2s ease;
+}
+
+.btn-edit { background: #fef3c7; }
+.btn-delete { background: #fee2e2; }
+
+.btn-edit:hover { transform: scale(1.15); }
+.btn-delete:hover { transform: scale(1.15); }
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .parcels-table th,
+  .parcels-table td {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+  .parcel-form { flex-direction: column; }
+}
